@@ -1,4 +1,4 @@
-@charset "UTF-8"
+@charset "UTF-8";
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
@@ -14,12 +14,12 @@
 }
 
 :root{
---cor0:#c5ebd6;
---cor1:#83e1ad;
---cor2:#3ddc84;
---cor3:#2fa866;
---cor4:#1a5c37;
---cor5:#063d1e;
+--cor0:#D9B4BE;
+--cor1:#F2CED8;
+--cor2:#FAACC4;
+--cor3:#F29F80;
+--cor4:#8C2641;
+--cor5:#732634;
 
 --fonte-padrão: Arial, Verdana, Helvetica, Sans-serif;
 --fonte-destaque:'Bebas Neue', 'cursive';
@@ -97,7 +97,7 @@ main h1{
     font-weight: normal; 
 }
 
-main h2{
+main h2,h3{
     font-family: var(--fonte-android);
     color: var(--cor4);
     font-size: 1.3em;
@@ -189,4 +189,26 @@ footer{
     text-align: center;
     font-size: 0.8em;
     padding: 5px;
+}
+
+table{
+    border-collapse: collapse;
+}
+caption{
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 20px;
+}
+
+th,td{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+tr:nth-child(even){
+    background-color: rgb(228,228,228);
+}
+
+div#container{
+    overflow-x:auto ;
 }
