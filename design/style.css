@@ -67,7 +67,7 @@ nav{
 nav>a{
     color: var(--cor1);
     font-weight: bold;
-    padding: 10px;
+    padding: 12px;
     text-decoration: none; 
     border-radius: 5px;
 }
@@ -109,6 +109,10 @@ main h2,h3{
     font-weight: normal;
     background-image: linear-gradient(to right, var(--cor1),transparent);
     text-indent: 8px;
+}
+
+main h3{
+    padding: 2px;
 }
 
 main p{
@@ -211,9 +215,10 @@ th,td{
     padding: 10px;
 }
 
-tr:nth-child(even){
+#tablein tr:nth-child(even){
     background-color: rgb(228,228,228);
 }
+
 
 div#container{
     overflow-x:auto ;
@@ -269,3 +274,19 @@ div.slide{
     text-align: center;
 }
 
+main blockquote {
+    font-style: italic;
+    text-align: justify;
+    margin: 0 0 0 80px; 
+    padding: 0;
+}
+
+img.pequeno{
+    width: 50%; 
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto; 
+    height: 50%;
+    border: 2px solid var(--cor5); /* Cor e espessura da borda */
+    border-radius: 5px; /* Borda arredondada (opcional) */
+}
