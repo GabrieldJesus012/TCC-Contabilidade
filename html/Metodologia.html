@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/imagens/contabilidade.ico" type="image/x-icon">
     <link rel="stylesheet" href="/design/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>TCC-Contabeis</title>
 </head>
 <body>
@@ -12,13 +13,14 @@
             <h1>Contabilidade na Pandemia</h1>
             <p>Um estudo sobre o impacto da covid-19 nos escritórios Teresinenses</p>
         </header>
-        <nav>  
-            <a href="/index.html" rel="prev">Home </a>
-            <a href="introducao.html" rel="prev">Introdução</a>
-            <a href="Metodologia.html">Procedimentos Metodológicos</a>
-            <a href="Analisedados.html" rel="next">Apresentação e Análise de Dados</a>
-            <a href="finais.html" rel="next">Considerações Finais</a>
-        </nav>
+        <span id="nav" class="material-symbols-outlined" onclick="clickmenu()">menu</span>
+        <menu id="menu">  
+            <a href="index.html">Home</a>
+            <a href="html/introducao.html" rel="next">Introdução</a>
+            <a href="html/Metodologia.html" rel="next">Procedimentos Metodológicos</a>
+            <a href="html/Analisedados.html" rel="next">Apresentação e Análise de Dados</a>
+            <a href="html/finais.html" rel="next">Considerações Finais</a>
+        </menu>
     <main>
         <article>
             <h1>3. Procedimentos Metodológicos</h1>
@@ -157,10 +159,42 @@
             <p>
                 Após a conclusão das entrevistas, o material foi transcrito com o propósito de viabilizar a análise subsequente
             </p>
+
+            <a href="introducao.html" class="seta-esquerda">&larr;</a>
+            <a href="Analisedados.html" class="seta-direita">&rarr;</a>
+
+            <a href="#" id="seta-subir" class="seta-subir">&uarr;</a>
         </article>
     </main>
     <footer>
         <p>Site criado por <em>Gabriel de Jesus</em>.</p>
     </footer>
 </body>
+<script>
+    function checkWindowSize() {
+    var menu = document.getElementById("menu");
+    var nav = document.getElementById("nav");
+
+    if (window.innerWidth <= 768) {
+        menu.style.display = "none";
+        nav.style.display = "block";
+    } else {
+        menu.style.display = "flex";
+        nav.style.display = "none";
+    }
+}
+
+checkWindowSize();
+
+window.addEventListener("resize", checkWindowSize);
+
+function clickmenu() {
+    var menu = document.getElementById("menu");
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+}
+</script>
 </html>

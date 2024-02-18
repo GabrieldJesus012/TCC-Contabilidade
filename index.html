@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="imagens/contabilidade.ico" type="image/x-icon">
     <link rel="stylesheet" href="design/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>TCC-Contabeis</title>
 </head>
 <body>
@@ -12,13 +13,15 @@
             <h1>Contabilidade na Pandemia</h1>
             <p>Um estudo sobre o impacto da covid-19 nos escritórios Teresinenses</p>
         </header>
-        <nav>  
-            <a href="index.html">Home </a>
+        <span id="nav" class="material-symbols-outlined" onclick="clickmenu()">menu</span>
+        <menu id="menu">  
+            <a href="index.html">Home</a>
             <a href="html/introducao.html" rel="next">Introdução</a>
             <a href="html/Metodologia.html" rel="next">Procedimentos Metodológicos</a>
             <a href="html/Analisedados.html" rel="next">Apresentação e Análise de Dados</a>
             <a href="html/finais.html" rel="next">Considerações Finais</a>
-        </nav>
+        </menu>
+        
     <main>
         <article>
         <div class="slide">
@@ -121,6 +124,8 @@
             </aside>
 
             <p>Então é isso! Espero que você tenha gostado do nosso artigo com essa curiosidade sobre o sistema <strong>Android</strong> e seu simpático mascote.</p>
+
+            <a href="html/introducao.html" class="seta-direita">&rarr;</a>
         </article>
     </main>
     <footer>
@@ -145,5 +150,33 @@
         }
         slides[slideIndex-1].style.display = "block";
     }
+
+
+function checkWindowSize() {
+    var menu = document.getElementById("menu");
+    var nav = document.getElementById("nav");
+
+    if (window.innerWidth <= 768) {
+        menu.style.display = "none";
+        nav.style.display = "block";
+    } else {
+        menu.style.display = "flex";
+        nav.style.display = "none";
+    }
+}
+
+checkWindowSize();
+
+window.addEventListener("resize", checkWindowSize);
+
+function clickmenu() {
+    var menu = document.getElementById("menu");
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+}
+
 </script>
 </html>
